@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:task_yemensofte/core/style/app_color.dart';
 
 class AppearWidget extends StatelessWidget {
-  const AppearWidget({super.key});
+  final String name;
+  const AppearWidget({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -18,20 +19,20 @@ class AppearWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Ahmed",
+                  name,
                   style: TextStyle(
                     fontSize: 25,
                     color: AppColor.secondaryColor,
                   ),
                 ),
-                Text(
-                  "Othman",
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w600,
-                    color: AppColor.secondaryColor,
-                  ),
-                ),
+                // Text(
+                //   "Othman",
+                //   style: TextStyle(
+                //     fontSize: 25,
+                //     fontWeight: FontWeight.w600,
+                //     color: AppColor.secondaryColor,
+                //   ),
+                // ),
               ],
             ),
           ),

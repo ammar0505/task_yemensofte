@@ -4,7 +4,8 @@ import 'package:task_yemensofte/features/order_feature/presentation/widget/appea
 import 'package:task_yemensofte/features/order_feature/presentation/widget/order_card_widget.dart';
 
 class OrdersScreen extends StatelessWidget {
-  const OrdersScreen({super.key});
+  final String name;
+  const OrdersScreen({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class OrdersScreen extends StatelessWidget {
         backgroundColor: AppColor.secondaryColor,
         body: Column(
           children: [
-            const AppearWidget(),
+            AppearWidget(name: name),
             const SizedBox(height: 12),
             Container(
               width: 300,
