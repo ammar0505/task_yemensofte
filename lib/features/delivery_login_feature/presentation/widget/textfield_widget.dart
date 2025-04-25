@@ -23,7 +23,7 @@ class TextFieldWidget extends StatelessWidget {
         textAlign: TextAlign.center,
         decoration: InputDecoration(
           filled: true,
-          fillColor: AppColor.secondaryColor,
+          fillColor: AppColor.textFieldColor,
           hintText: hintText,
           hintStyle: const TextStyle(
             fontFamily: 'Montserrat',
