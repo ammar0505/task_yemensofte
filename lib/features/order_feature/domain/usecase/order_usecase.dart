@@ -11,7 +11,8 @@ class OrderUsecase extends UseCaseWithParam<OrderEntity, OrderParams> {
 
   @override
   Future<Either<Failure, OrderEntity>> execute(OrderParams params) {
-    return orderRepo.getOrders(params.userid, params.lang, params.P_BILL_SRL, params.P_PRCSSD_FLG);
+    return orderRepo.getOrders(
+        params.userid, params.lang, params.P_BILL_SRL, params.P_PRCSSD_FLG);
   }
 }
 
@@ -21,5 +22,5 @@ class OrderParams {
   final String P_BILL_SRL;
   final String P_PRCSSD_FLG;
 
-  OrderParams(this.userid, this.P_BILL_SRL, this.lang, this.P_PRCSSD_FLG);
+  OrderParams(this.userid, this.lang, this.P_BILL_SRL, this.P_PRCSSD_FLG);
 }
