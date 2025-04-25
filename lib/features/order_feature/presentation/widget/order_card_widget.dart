@@ -58,79 +58,92 @@ class OrderCardWidget extends StatelessWidget {
                     const SizedBox(height: 12),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'Status',
-                              style: TextStyle(
-                                color: AppColor.brownColor,
-                                fontSize: 12,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'Status',
+                                style: TextStyle(
+                                  color: AppColor.brownColor,
+                                  fontSize: 12,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              status,
-                              style: TextStyle(
-                                color: statusColor,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                              const SizedBox(height: 4),
+                              Text(
+                                status,
+                                style: TextStyle(
+                                  color: statusColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Container(
                           width: 1,
                           height: 30,
                           color: Colors.grey,
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'Total price',
-                              style: TextStyle(
-                                color: AppColor.brownColor,
-                                fontSize: 12,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'Total price',
+                                style: TextStyle(
+                                  color: AppColor.brownColor,
+                                  fontSize: 12,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              totalPrice,
-                              style: const TextStyle(
-                                color: AppColor.primaryColor,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                              const SizedBox(height: 4),
+                              Text(
+                                totalPrice,
+                                style: const TextStyle(
+                                  color: AppColor.primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Container(
                           width: 1,
                           height: 30,
                           color: Colors.grey,
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'Date',
-                              style: TextStyle(
-                                color: AppColor.brownColor,
-                                fontSize: 12,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'Date',
+                                style: TextStyle(
+                                  color: AppColor.brownColor,
+                                  fontSize: 12,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              date,
-                              style: const TextStyle(
-                                color: AppColor.primaryColor,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                              const SizedBox(height: 4),
+                              Text(
+                                date,
+                                style: const TextStyle(
+                                  color: AppColor.primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                                // overflow: TextOverflow.ellipsis,
+                                // maxLines: 1,
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -157,6 +170,8 @@ class OrderCardWidget extends StatelessWidget {
                         color: AppColor.secondaryColor,
                         fontSize: 12,
                       ),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                     ),
                     Text(
                       'Details',
@@ -164,6 +179,8 @@ class OrderCardWidget extends StatelessWidget {
                         color: AppColor.secondaryColor,
                         fontSize: 12,
                       ),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                     ),
                     const SizedBox(height: 4),
                     Icon(
