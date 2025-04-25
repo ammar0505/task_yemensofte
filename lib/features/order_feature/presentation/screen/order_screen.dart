@@ -120,14 +120,30 @@ class _OrdersScreenState extends State<OrdersScreen>
                     } else if (state is OrderCubitSucsses) {
                       if (state.order.deliveryBills == null ||
                           state.order.deliveryBills!.isEmpty) {
-                        return const Center(
-                          child: Text(
-                            'No new orders available',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 16,
+                        return Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
+                                child: Image.asset(
+                              "images/png/ic_emptyorder@2x.png",
+                              width: 224,
+                              height: 180,
+                            )),
+                            Text(
+                              "No orders yet",
+                              style: TextStyle(
+                                  color: AppColor.textColor,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w600),
                             ),
-                          ),
+                            Text(
+                              "You don't have any orders in your history.",
+                              style: TextStyle(
+                                  color: AppColor.textColor,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
                         );
                       }
 
@@ -189,14 +205,30 @@ class _OrdersScreenState extends State<OrdersScreen>
                     } else if (state is OrderCubitSucsses) {
                       if (state.order.deliveryBills == null ||
                           state.order.deliveryBills!.isEmpty) {
-                        return const Center(
-                          child: Text(
-                            'No other orders available',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 16,
+                        return  Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
+                                child: Image.asset(
+                              "images/png/ic_emptyorder@2x.png",
+                              width: 224,
+                              height: 180,
+                            )),
+                            Text(
+                              "No orders yet",
+                              style: TextStyle(
+                                  color: AppColor.textColor,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w600),
                             ),
-                          ),
+                            Text(
+                              "You don't have any orders in your history.",
+                              style: TextStyle(
+                                  color: AppColor.textColor,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
                         );
                       }
 
