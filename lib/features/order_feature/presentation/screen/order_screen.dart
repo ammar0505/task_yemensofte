@@ -62,7 +62,7 @@ class OrdersScreen extends StatelessWidget {
                       );
                     },
                   ),
-                   ListView.builder(
+                  ListView.builder(
                     itemCount: 10,
                     padding: const EdgeInsets.all(16),
                     itemBuilder: (context, index) {
