@@ -30,7 +30,7 @@ class     DeliveryLoginRepoimpl extends DeliveryLoginRepo {
   Future<Either<Failure, DeliveryLoginEntity>> signIn(
    String userid, String password, String Language
   ) async {
-    return postData(() => deliveryLoginRemoteDataSource.signIn( userid,  password,  Language));
+    return postData(() => deliveryLoginRemoteDataSource.login( userid,  password,  Language));
   }
 
 
