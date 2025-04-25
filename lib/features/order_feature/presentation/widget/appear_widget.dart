@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_yemensofte/core/shered_widget/show_language_dialog.widget.dart';
 import 'package:task_yemensofte/core/style/app_color.dart';
 
 class AppearWidget extends StatelessWidget {
@@ -62,19 +63,24 @@ class AppearWidget extends StatelessWidget {
           Positioned(
             right: 16,
             top: 30,
-            child: Container(
-              height: 24,
-              width: 24,
-              decoration: BoxDecoration(
-                color: AppColor.secondaryColor,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Image.asset(
-                  "images/png/ic_language@2x.png",
-                  width: 16,
-                  height: 16,
-                  fit: BoxFit.contain,
+            child: GestureDetector(
+              onTap: () {
+                showLanguageDialog(context);
+              },
+              child: Container(
+                height: 24,
+                width: 24,
+                decoration: BoxDecoration(
+                  color: AppColor.secondaryColor,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Image.asset(
+                    "images/png/ic_language@2x.png",
+                    width: 16,
+                    height: 16,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),
