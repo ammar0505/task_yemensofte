@@ -4,9 +4,9 @@ import 'package:task_yemensofte/core/style/app_color.dart';
 class OrderStatusProvider with ChangeNotifier {
   Color getStatusColor(String status) {
     switch (status) {
-      case 'Delivering':
+      case 'FULL_RETURN ':
         return AppColor.primaryColor;
-      case 'Returned':
+      case 'PARTIAL_RETURN':
         return AppColor.redColor;
       case 'Delivered':
         return AppColor.lightGrayColor;
