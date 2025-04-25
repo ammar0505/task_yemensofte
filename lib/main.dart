@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
-
-import 'features/splash_screen_feature/presentation/screen/splash_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:task_yemensofte/core/provider/order_state.dart';
+import 'package:task_yemensofte/core/style/app_color.dart';
+import 'package:task_yemensofte/features/order_feature/presentation/screen/order_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => OrderStatusProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,14 +22,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Orders Delivery',
-      debugShowCheckedModeBanner: false, 
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromRGBO(255, 255, 255, 1),
+          seedColor: AppColor.secondaryColor,
         ),
-        useMaterial3: true, 
+        useMaterial3: true,
       ),
-      home: const SplashScreen(), 
+      home: OrdersScreen(),
     );
   }
 }
