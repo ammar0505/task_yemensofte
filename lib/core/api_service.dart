@@ -4,7 +4,7 @@ import 'errors/failure.dart';
 
 class ApiService {
   final Dio _dio;
-  final baseUrl = "";
+  final baseUrl = "http://mdev.yemensoft.net:8087/";
 
   ApiService(this._dio);
   // {
@@ -89,7 +89,6 @@ class ApiService {
 
       return response.data;
     } catch (error, stacktrace) {
-     
       throw Exception(
         'Failed to make PUT request , Error: $error , Stacktrace: $stacktrace ',
       );
@@ -111,7 +110,6 @@ class ApiService {
 
       return response.data;
     } catch (error, stacktrace) {
-     
       throw Exception(
         'Failed to make PATCH request , Error: $error , Stacktrace: $stacktrace ',
       );
@@ -131,7 +129,6 @@ class ApiService {
 
       return response.data;
     } catch (error, stacktrace) {
-     
       throw Exception(
         'Failed to make DELETE request , Error: $error , Stacktrace: $stacktrace ',
       );
@@ -150,7 +147,6 @@ class ApiService {
       FormData formData = FormData.fromMap(data);
 
       if (imageFiles.isEmpty != true) {
-       
         for (var file in imageFiles) {
           String fileName = file.path.split('/').last;
           formData.files.add(
@@ -161,7 +157,6 @@ class ApiService {
           );
         }
       }
-    
 
       var response = await _dio.post(
         '$baseUrl$endPoint',
@@ -188,8 +183,6 @@ class ApiService {
 
       print('Data provided: $data');
 
-     
-
       if (data.containsKey('OrderId')) {
         formData.fields.add(MapEntry('OrderId', data['OrderId'].toString()));
       } else {
@@ -200,7 +193,7 @@ class ApiService {
       } else {
         throw Exception('Amount  is required');
       }
-     
+
       if (data.containsKey('Currency')) {
         formData.fields.add(MapEntry('Currency', data['Currency'].toString()));
       } else {
@@ -222,9 +215,7 @@ class ApiService {
             await MultipartFile.fromFile(file.path, filename: fileName),
           ),
         );
-      }
-      
-      else {
+      } else {
         print('error ');
       }
       // Make the POST request
