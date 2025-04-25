@@ -11,7 +11,8 @@ class OrderModel extends OrderEntity {
       : super(
             id: data?.deliveryBills?.first.billSrl,
             total: data?.deliveryBills?.first.billAmt,
-            date: data?.deliveryBills?.first.billDate);
+            date: data?.deliveryBills?.first.billDate,
+            deliveryBills: data?.deliveryBills);
 
   factory OrderModel.fromJson(Map<String, dynamic> json) => OrderModel(
         data: json['Data'] == null
